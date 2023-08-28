@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="circle-5 rotate-div-anticlockwise circle">
+        <div class="leaf10"></div>
+        <div class="leaf11"></div>
+        <div class="leaf12"></div>
+        <div class="leaf13"></div>
+        <div class="leaf14"></div>
+        <div class="leaf15"></div>
+        <div class="leaf16"></div>
+        <div class="leaf17"></div>
+        <div class="leaf18"></div>
+        <div class="leaf19"></div>
+        <div class="leaf20"></div>
+        <div class="leaf21"></div>
+        <div class="leaf22"></div>
+        <div class="leaf23"></div>
+        <div class="leaf24"></div>
+        <div class="leaf25"></div>
+
+        <div class="circle-4 rotate-div-clockwise circle">
+            <div class="leaf1"></div>
+            <div class="leaf2"></div>
+            <div class="leaf3"></div>
+            <div class="leaf4"></div>
+            <div class="leaf5"></div>
+            <div class="leaf6"></div>
+            <div class="leaf7"></div>
+            <div class="leaf8"></div>
+
+    </div>
+    <div class="circle-3 rotate-div-clockwise circle">
+        <div class="leaf0"></div>
+        <div class="leaf90"></div>
+        <div class="leaf45"></div>
+        <div class="leaf180"></div>
+        <div class="leaf135"></div>
+        <div class="leaf270"></div>
+        <div class="leaf225"></div>
+        <div class="leaf315"></div>
+        <div class="circle-2">
+            <div class="circle-1 circle">
+                <div class="dot">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    <div class="button-div">
+
+        <button id="toggleButton">Stop/Start Animation</button>
+    </div>
+
+    <script>
+        const circles = document.querySelectorAll('.circle');
+        let animationsPaused = false;
+      
+        function toggleAnimations() {
+          if (animationsPaused) {
+            circles.forEach(circle => {
+              circle.style.animationPlayState = 'running';
+            });
+          } else {
+            circles.forEach(circle => {
+              circle.style.animationPlayState = 'paused';
+            });
+          }
+          animationsPaused = !animationsPaused;
+        }
+      
+        const toggleButton = document.getElementById('toggleButton');
+        toggleButton.addEventListener('click', toggleAnimations);
+      </script>
+</body>
+
+</html>
